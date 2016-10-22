@@ -1,0 +1,236 @@
+// bower:scss
+// endbower
+
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,600");
+
+$menu-height: 7vh;
+$menu-width: 82%;
+$cta-color: rgba(255, 134, 13, 0.8);
+$cta-shadow: rgba(171, 90, 9, 0.8);
+
+
+a {
+  text-transform: capitalize;
+  color: unset;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 103%;
+  margin: 0;
+  padding: 0;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  width: 100%;
+  height: $menu-height;
+  background-color: hsla(0, 0%, 100%, 0.97);
+  box-shadow: 2px 0 2px hsla(0, 0%, 100%, 0.97);
+  position: fixed;
+  top: 0;
+}
+
+nav {
+  color: rgba(0, 0, 0, 0.8);
+  width: $menu-width;
+  margin: 0 auto;
+  ul {
+    line-height: $menu-height;
+    float: right;
+    padding-right: 1.5vw;
+  }
+  li {
+    display: inline-block;
+    a {
+      cursor: pointer;
+      display: inherit;
+      height: $menu-height;
+      padding: 0 1vw;
+      -webkit-transition: color .25s;
+      transition: color 0.25s;
+      &:hover:not(#cta) {
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+  .social-icon {
+    display: inline-block;
+    img {
+      width: 3vw;
+    }
+  }
+}
+
+#intro {
+  margin-top: $menu-height;
+  color: #000;
+  background: #0f0 url(../images/bg.jpg) no-repeat (50% / cover);
+  height: 75vh;
+  #banner {
+    width: 50%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 0 2vw 8vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    #product-photo {
+      width: 25vh;
+      margin-left: 1vw;
+      margin-bottom: 0.7vw;
+    }
+    h1 {
+      text-align: center;
+      font-size: 5vh;
+      font-weight: 600;
+    }
+    h2 {
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 2.7vh;
+      text-align: center;
+      margin-top: .5vw;
+      width: 70%;
+    }
+    h3 {
+      font-size: 2.2vh;
+    }
+    button[name=buy-now] {
+      display: block;
+      margin-top: 1.3vw;
+      background-color: $cta-color;
+      width: 16vw;
+      padding: 2vw 0;
+      line-height: 0;
+      box-shadow: 0 4px 1px $cta-shadow;
+      border-radius: 6px;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      -webkit-transition: .25s;
+      transition: .25s;
+      outline: none;
+      font-size: 2.8vh;
+      &:hover {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+        background-color: #ff820d;
+        ~ {
+          img[alt="PayPal logo"] {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+          #shipping {
+            -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+          }
+        }
+      }
+    }
+    img[alt="PayPal logo"] {
+      margin-top: 1vw;
+      width: 15vw;
+      -webkit-transition: .25s;
+      transition: 0.25s;
+    }
+    #shipping {
+      -webkit-transition: .25s;
+      transition: .25s;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      height: 7vh;
+      width: 30%;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      img[alt="truck icon"] {
+        height: 5vh;
+      }
+      h3 {
+        margin-left: 1vh;
+      }
+    }
+  }
+}
+
+#logo {
+  display: inline;
+  height: $menu-height;
+  padding: 0.75vw;
+}
+
+#cta {
+  margin: 0 0 0 .5vw;
+  vertical-align: baseline;
+  line-height: 4.9vh;
+  height: 4.9vh;
+  border-radius: 5px;
+  box-shadow: 0 4px 1px $cta-shadow;
+  background: $cta-color;
+  color: #fff;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  cursor: pointer;
+  &:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    background-color: #ff820d;
+  }
+}
+
+#social-proof {
+  height: 17vh;
+  color: rgba(0, 0, 0, 0.4);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  #social-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: inline-block;
+  }
+  .featured-logo {
+    display: inline-block;
+    width: 8vw;
+    img {
+      width: 100%;
+    }
+  }
+}
