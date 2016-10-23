@@ -234,3 +234,45 @@ nav {
     }
   }
 }
+
+#how-it-works {
+  $width: 92%;
+  width: $width;
+  padding: (100% - $width) / 2;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  h1, h2 {
+    text-align: center;
+    font-size: 2vw;
+  }
+  h2 {
+    margin-top: 0.6vw;
+    font-size: 1.3vw;
+  }
+  #iphone-map {
+    background: url(../images/iphone-arrow.png) no-repeat (50% / contain);
+    height: 50vw;
+    width: 40vw;
+  }
+  .features-benefits {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30vw;
+  }
+  .benefit {
+    img {
+      background-color: rgba(13,144,212,0.2);
+      padding: 2.5vw;
+      border-radius: 100px;
+      box-shadow: 0 0 30px rgba(13,144,212,0.2);
+      display: block;
+      box-sizing: padding-box;
+      margin: 0 auto;
+      width: 45%;
+      margin-bottom: 1.5vw;
+    }
+  }
+
+}
