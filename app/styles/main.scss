@@ -71,7 +71,7 @@ nav {
   margin-top: $menu-height;
   color: #000;
   background: #0f0 url(../images/bg.jpg) no-repeat (50% / cover);
-  height: 75vh;
+  height: 78vh;
   #banner {
     width: 50%;
     -webkit-box-align: center;
@@ -197,7 +197,7 @@ nav {
 }
 
 #social-proof {
-  height: 17vh;
+  height: 13vh;
   color: rgba(0, 0, 0, 0.4);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -274,5 +274,63 @@ nav {
       margin-bottom: 1.5vw;
     }
   }
+}
 
+#specifications {
+  display: flex;
+  justify-content: center;
+
+  #photo-banner {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 20vw;
+    }
+  }
+  .specs-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &:nth-of-type(3) .spec img {
+      width: 9vw;
+      height: 9vw;
+    }
+    .spec {
+      padding-top: 2vw;
+      width: 25vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      // background-color: blue;
+      text-align: center;
+      img {
+        display: inline-block;
+        background-color: rgba(13,144,212,0.1);
+        padding: 1vw;
+        border-radius: 100px;
+        box-shadow: 0 0 30px rgba(13,144,212,0.2);
+        display: block;
+        width: 7vw;
+        height: 7vw;
+        margin: 0.5vw auto;
+      }
+    }
+    h1 {
+      font-size: 2vw;
+      padding-bottom: 0.5vw;
+    }
+    #icon-row {
+      margin: 0 auto;
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      img {
+        margin: 0 1vw;
+      }
+    }
+  }
 }
